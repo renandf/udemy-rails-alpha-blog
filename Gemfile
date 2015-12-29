@@ -22,6 +22,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# Add gems to your Gemfile from the command line: https://github.com/DruRly/gemrat 
+gem 'gemrat'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -49,3 +51,5 @@ group :production do
   gem 'rails_12factor'
 end
 
+# Gems added with gemrat:
+gem 'bootstrap-sass', '3.3.6'
