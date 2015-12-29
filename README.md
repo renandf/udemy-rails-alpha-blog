@@ -4,6 +4,10 @@ This is the Apha Blog exercise from Udemy's course [The Complete Ruby on Rails D
 
 The solution presented here was made by [Renan Castro](http://renancastro.com) and it's a variation from the orginal. It's an attempt to integrate [React](https://facebook.github.io/react/) into the project.
 
+## Demo
+
+You can view the demo here: [http://renan-alpha-blog.herokuapp.com](http://renan-alpha-blog.herokuapp.com)
+
 ## Ruby and Rails versions
 
 `ruby 2.3.0`
