@@ -53,3 +53,5 @@ end
 
 # Gems added with gemrat:
 gem 'bootstrap-sass', '3.3.6'
+gem 'haml', '~> 4.0.7'
+gem 'haml-rails', '~> 0.9.0'
