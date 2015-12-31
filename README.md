@@ -16,8 +16,8 @@ There are multiple modifications from the original scope of the exercise, includ
 
 ## Ruby and Rails versions
 
-`ruby 2.3.0`
-`Rails 4.2.5`
+* `ruby 2.3.0`
+* `Rails 4.2.5`
 
 ## Configuration
 
