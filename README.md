@@ -1,6 +1,6 @@
 # Apha Blog exercise for Udemy course
 
-This is the Apha Blog exercise from Udemy's course [The Complete Ruby on Rails Developer Course](https://www.udemy.com/the-complete-ruby-on-rails-developer-course). The solution presented here was made by [Renan Castro](http://renancastro.com) and it's a variation from the orginal.
+This is the Apha Blog exercise from Udemy's [The Complete Ruby on Rails Developer Course](https://www.udemy.com/the-complete-ruby-on-rails-developer-course). The solution presented here was made by [Renan Castro](http://renancastro.com) and it's a variation from the orginal.
 
 ## Demo
 
