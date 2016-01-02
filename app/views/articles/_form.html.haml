@@ -1,19 +1,19 @@
 = render 'shared/errors', obj: @article
-.row
+.row.margin-t10
   = form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f|
     .form-group
-      .control-label.col-sm-2.text-right
+      .control-label.col-sm-3.text-right
         = f.label :title
         %br/
       .col-sm-7
         = f.text_field :title, class: "form-control", placeholder: "Title of Article", autofocus: true
     .form-group
-      .control-label.col-sm-2.text-right
+      .control-label.col-sm-3.text-right
         = f.label :description
         %br/
       .col-sm-7
         = f.text_area :description, rows: 7, class: "form-control", placeholder: "Body of article"
     .form-group
-      .col-sm-7.col-sm-offset-2
+      .col-sm-7.col-sm-offset-3
         = f.submit class: "btn btn-primary"
         = link_to "Cancel", articles_path, class: "btn btn-link"
