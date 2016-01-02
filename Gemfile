@@ -55,3 +55,4 @@ end
 gem 'bootstrap-sass', '3.3.6'
 gem 'haml', '~> 4.0.7'
 gem 'haml-rails', '~> 0.9.0'
+gem 'bcrypt', '3.1.10'
