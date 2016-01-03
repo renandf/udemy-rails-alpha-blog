@@ -1,0 +1,16 @@
+%h1.text-center Log in
+= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f|
+  .form-group
+    .control-label.col-sm-3.text-right
+      = f.label :email
+    .col-sm-7
+      = f.email_field :email, class: "form-control", placeholder: "Enter email", autofocus: true
+  .form-group
+    .control-label.col-sm-3.text-right
+      = f.label :password
+    .col-sm-7
+      = f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "Enter password"
+  .form-group
+    .col-sm-7.col-sm-offset-3
+      = f.submit "Log in", class: "btn btn-primary"
+      = link_to "Cancel", articles_path, class: "btn btn-link"

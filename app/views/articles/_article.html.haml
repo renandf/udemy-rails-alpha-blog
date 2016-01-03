@@ -12,12 +12,13 @@
             #{time_ago_in_words(article.created_at)} ago
             %br/
             Last updated: #{time_ago_in_words(article.updated_at)} ago
-      .article-actions
-        = link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe,
-          edit_article_path(article),
-          class: "btn btn-default btn-sm"
-        = link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe,
-          article_path(article),
-          method: :delete,
-          data: { confirm: "Are you sure you want to delete the article?"},
-          class: "btn btn-default btn-sm"
+      - if logged_in? && current_user == article.user
+        .article-actions
+          = link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe,
+            edit_article_path(article),
+            class: "btn btn-default btn-sm"
+          = link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe,
+            article_path(article),
+            method: :delete,
+            data: { confirm: "Are you sure you want to delete the article?"},
+            class: "btn btn-default btn-sm"
