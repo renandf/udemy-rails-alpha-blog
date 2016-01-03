@@ -3,16 +3,16 @@
                                               ("col-md-offset-0" if obj.length != 1)]}
     .well
       %h4
-        = link_to article.title, article_path(article)
+        = link_to truncate(article.title, length: 30), article_path(article)
       %div
-        = truncate(article.description, length: 100)
+        .article-description= truncate(article.description, length: 100)
         .article-details
           %small.text-muted
-            Created by #{article.user.username if article.user}
+            Created by #{link_to article.user.username, user_path(article.user) if article.user}
             #{time_ago_in_words(article.created_at)} ago
             %br/
             Last updated: #{time_ago_in_words(article.updated_at)} ago
-      - if logged_in? && current_user == article.user
+      - if logged_in? && (current_user == article.user || current_user.admin?)
         .article-actions
           = link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe,
             edit_article_path(article),
