@@ -1,4 +1,7 @@
+%h1.text-center Listing all articles
 .text-center
-  %h1 Listing all articles
+  = will_paginate
 .row.margin-t10
   = render 'article', obj: @articles
+.text-center
+  = will_paginate

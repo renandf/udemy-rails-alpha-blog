@@ -1,4 +1,6 @@
 %h1.text-center All Alpha Bloggers
+.text-center
+  = will_paginate
 .row.margin-t10
   - @users.each do |user|
     .col-xs-8.col-xs-offset-2.col-md-4{ class:[ ("col-md-offset-4" if @users.length == 1),
@@ -9,3 +11,5 @@
           = link_to user.username, user_path(user)
         %small
           = pluralize(user.articles.count, "article") if user.articles
+.text-center
+  = will_paginate
