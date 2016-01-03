@@ -3,7 +3,7 @@
                                               ("col-md-offset-0" if obj.length != 1)]}
     .well
       %h4
-        = link_to truncate(article.title, length: 30), article_path(article)
+        = link_to truncate(article.title, length: 28), article_path(article)
       %div
         .article-description= truncate(article.description, length: 100)
         .article-details
