@@ -23,6 +23,18 @@ footer {
   }
 }
 
+.article-actions {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
+.article-details {
+  border-top: 1px dotted #d3d3d3;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
 .margin-t10 {
   margin-top: 10px;
 }
