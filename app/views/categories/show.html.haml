@@ -1,4 +1,6 @@
 %h1.text-center= "Category: " + @category.name
+- if logged_in? and current_user.admin?
+  .text-center= link_to "Edit Category Name", edit_category_path(@category)
 %h5.text-center.text-muted
   There are #{ pluralize(@category.articles.count, "article") } in this category
 .text-center

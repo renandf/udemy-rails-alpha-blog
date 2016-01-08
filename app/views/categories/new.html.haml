@@ -1,13 +1,2 @@
 %h1.text-center Create New Category
-= render 'shared/errors', obj: @category
-.row.margin-t30
-  = form_for(@category, :html => {class: "form-horizontal", role: "form"}) do |f|
-    .form-group
-      .control-label.col-sm-3.text-right
-        = f.label :name
-      .col-sm-7
-        = f.text_field :name, class: "form-control", placeholder: "Category name", autofocus: true
-    .form-group
-      .col-sm-7.col-sm-offset-3
-        = f.submit class: "btn btn-primary"
-        = link_to "Cancel", articles_path, class: "btn btn-link"
+= render 'form'
