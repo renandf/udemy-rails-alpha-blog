@@ -1,7 +1,7 @@
 %h1.text-center All Articles
 .text-center
   = will_paginate
-.row.margin-t10
+.row.margin-t10{ class:("margin-t30" if @categories.length <= 9) }
   = render 'article', obj: @articles
 .text-center
   = will_paginate
