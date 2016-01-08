@@ -1,0 +1,11 @@
+%h1.text-center Listing All Categories
+.text-center
+  = will_paginate
+.row.margin-t10
+  - @categories.each do |category|
+    .col-xs-10.col-xs-offset-1.col-md-4{ class:[ ("col-md-offset-4" if @categories.length == 1),
+                                              ("col-md-offset-0" if @categories.length != 1)]}
+      .well.well-sm.text-center
+        %h4= link_to "#{category.name}", category_path(category)
+.text-center
+  = will_paginate
