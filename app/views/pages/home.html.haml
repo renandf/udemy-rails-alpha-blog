@@ -1,3 +1,17 @@
 .jumbotron.text-center
   %h1 Alpha Blog
-  = link_to "Sign up now", signup_path, class: "btn btn-primary btn-lg"
+  %p.margin-t30
+    This is an exercise from
+    %a{:href => "https://www.udemy.com/the-complete-ruby-on-rails-developer-course/", :target => "_blank"} The Complete Ruby on Rails Developer Course
+    on
+    %a{:href => "https://www.udemy.com/", :target => "_blank"} Udemy.
+    The goal was to create an application where you can create simple articles containing title and description, add categories to those articles and be able to edit or delete your own.
+  %p
+    You can view the
+    %a{ :href => "https://github.com/renandf/udemy-rails-alpha-blog", :target => "_blank"} Project on Github
+    to see details on how it was coded.
+  %p
+    You're welcome to sign up and create some fake articles to see how it works, or simply use the top navigation to check it without signing up. If you have a
+    %a{:href => "https://en.gravatar.com/", :target => "_blank"} Gravatar
+    account, your picture will be grabbed from there.
+  = link_to "Create a test account", signup_path, class: "btn btn-primary btn-lg margin-t30"
