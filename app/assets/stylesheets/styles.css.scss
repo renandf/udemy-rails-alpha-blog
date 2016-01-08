@@ -3,12 +3,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$light-gray: #d3d3d3;
+$lighter-gray: #eee;
+$white: #fff;
+$color-link: #337ab7;
+$dark: #222;
+$light-dark: #777;
+
 #logo {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 2px;
   opacity: 0.5;
-  background: -webkit-linear-gradient(#333, #eee);
+  background: -webkit-linear-gradient($dark, $lighter-gray);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -25,11 +32,13 @@
 footer {
   margin-top: 50px;
   padding-top: 10px;
-  border-top: 1px dotted #eee;
-  color: #777;
+  border-top: 1px dotted $lighter-gray;
+  color: $light-dark;
 
-  a:hover {
-    color: #222;
+  a:hover,
+  a:focus {
+    color: $dark;
+    text-decoration: none;
   }
 
   small {
@@ -42,6 +51,10 @@ footer {
   }
 }
 
+.article {
+  min-height: 240px;
+}
+
 .article-actions {
   position: absolute;
   top: 5px;
@@ -49,9 +62,39 @@ footer {
 }
 
 .article-details {
-  border-top: 1px dotted #d3d3d3;
+  border-top: 1px dotted $light-gray;
   margin-top: 15px;
   padding-top: 10px;
+}
+
+.category {
+  // padding: 5px 10px;
+  // background: fade-out($color-link, .5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 11px;
+  font-weight: bold;
+
+  // &:hover,
+  // &:focus {
+  //   background: $color-link;
+  // }
+
+  // a {
+  //   color: $white;
+
+  //   &:hover,
+  //   &:focus {
+  //     text-decoration: none;
+  //   }
+  // }
+}
+
+.input_checkbox {
+  input {
+    width: auto !important;
+  }
 }
 
 .margin-t10 {
@@ -60,6 +103,14 @@ footer {
 
 .margin-t30 {
   margin-top: 30px;
+}
+
+.margin-r5 {
+  margin-right: 5px;
+}
+
+.margin-r10 {
+  margin-right: 10px;
 }
 
 .margin-r20 {

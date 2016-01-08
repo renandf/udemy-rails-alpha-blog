@@ -7,7 +7,8 @@
   #{ @user.username } wrote #{ pluralize(@user.articles.count, "article") }
 .text-center
   = will_paginate @user_articles
-= render 'articles/article', obj: @user_articles
+.row.margin-t10{ class:("margin-t30" if @user_articles.length <= 9) }
+  = render 'articles/article', obj: @user_articles
 .row
   .col-md-12.text-center
     = will_paginate @user_articles

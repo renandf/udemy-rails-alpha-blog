@@ -5,10 +5,12 @@
         .small.text-muted Created by
         = link_to gravatar_for(@article.user), user_path(@article.user), class: "margin-t10"
         %h4= link_to @article.user.username, user_path(@article.user)
-  .well.col-xs-8.col-xs-offset-2
+  .well.col-xs-8.col-xs-offset-2.margin-t30
     %h2= @article.title
     %hr/
     = simple_format(@article.description)
+    - if @article.categories.any?
+      = render @article.categories
   .col-xs-8.col-xs-offset-2
     - if logged_in? && (current_user == @article.user || current_user.admin?)
       = link_to "Edit", edit_article_path(@article), class: "btn btn-link"

@@ -1,11 +1,13 @@
-%h1.text-center Listing All Categories
+%h1.text-center All Categories
 .text-center
   = will_paginate
-.row.margin-t10
+.row.margin-t10{ class:("margin-t30" if @categories.length <= 9) }
   - @categories.each do |category|
     .col-xs-10.col-xs-offset-1.col-md-4{ class:[ ("col-md-offset-4" if @categories.length == 1),
                                               ("col-md-offset-0" if @categories.length != 1)]}
       .well.well-sm.text-center
         %h4= link_to "#{category.name}", category_path(category)
+        %small
+          = pluralize(category.articles.count, "article")
 .text-center
   = will_paginate

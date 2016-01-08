@@ -1,17 +1,24 @@
 - obj.each do |article|
   .col-xs-10.col-xs-offset-1.col-md-4{ class:[ ("col-md-offset-4" if obj.length == 1),
                                               ("col-md-offset-0" if obj.length != 1)]}
-    .well
+    .well.article
       %h4
         = link_to truncate(article.title, length: 28), article_path(article)
       %div
         .article-description= truncate(article.description, length: 100)
         .article-details
-          %small.text-muted
-            Created by #{link_to article.user.username, user_path(article.user) if article.user}
-            #{time_ago_in_words(article.created_at)} ago
-            %br/
-            Last updated: #{time_ago_in_words(article.updated_at)} ago
+          - if article.categories.length == 1
+            = render article.categories[0]
+          - if article.categories.length > 1
+            = render article.categories[0, 2]
+          - if article.categories.length > 2
+            %span ...
+          %div{ class:("margin-t10" if article.categories.any?)}
+            %small.text-muted
+              Created by #{link_to article.user.username, user_path(article.user) if article.user}
+              #{time_ago_in_words(article.created_at)} ago
+              %br/
+              Last updated: #{time_ago_in_words(article.updated_at)} ago
       - if logged_in? && (current_user == article.user || current_user.admin?)
         .article-actions
           = link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe,

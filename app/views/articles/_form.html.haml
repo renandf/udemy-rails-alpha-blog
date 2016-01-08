@@ -1,5 +1,5 @@
 = render 'shared/errors', obj: @article
-.row.margin-t10
+.row.margin-t30
   = form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f|
     .form-group
       .control-label.col-sm-3.text-right
@@ -13,6 +13,10 @@
         %br/
       .col-sm-7
         = f.text_area :description, rows: 7, class: "form-control", placeholder: "Body of article"
+    .form-group
+      .col-sm-7.col-sm-offset-3
+        = f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb|
+          - cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text}
     .form-group
       .col-sm-7.col-sm-offset-3
         = f.submit class: "btn btn-primary"

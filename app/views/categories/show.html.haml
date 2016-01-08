@@ -1,0 +1,9 @@
+%h1.text-center= "Category: " + @category.name
+%h5.text-center.text-muted
+  There are #{ pluralize(@category.articles.count, "article") } in this category
+.text-center
+  = will_paginate @category_articles
+.row.margin-t10{ class:("margin-t30" if @category_articles.length <= 9) }
+  = render 'articles/article', obj: @category_articles
+.text-center
+  = will_paginate @category_articles
